@@ -415,7 +415,7 @@ class INDIWebApp:
 
         # Build app and start loop
         self.app = tornado.web.Application(handlers, **settings)
-        self.app.listen(self.port)
+        self.app.listen(self.port, address="127.0.0.1")
         self.mainloop.start()
 
 
